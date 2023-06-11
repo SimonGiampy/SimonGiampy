@@ -1,0 +1,187 @@
+% reference for latex template: https://github.com/latex-ninja/hipster-cv/tree/master
+
+\documentclass[pastel]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue!70!green,
+  pdftitle={Curriculum Simone Giampà}
+}
+\urlstyle{sf}
+%------------------------------------------------------------------ Variable
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.3\textwidth}
+\setlength{\rightcolwidth}{0.65\textwidth}
+
+%------------------------------------------------------------------
+\title{Curriculum Vitae}
+\author{Simone Giampà}
+\date{June 2023}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{}
+
+\simpleheader{headercolour}{Simone}{Giampà}{Computer Science Engineer}{white}
+
+%------------------------------------------------
+
+\subsection*{}
+\vspace{4em}
+\setlength{\columnsep}{3em}
+\columnratio{0.25}[0.7]
+\begin{paracol}{2}
+
+\paracolbackgroundoptions
+
+\footnotesize
+{
+\flushright
+\color{black}
+\bg{cvorange}{white}{About me}\\[0.5em]
+As a Computer Science Engineer, I possess a profound passion for leveraging technology to solve complex problems and drive innovation. With a solid foundation in ML and Robotics principles and a diverse range of practical experiences, I bring a unique blend of technical expertise and creative problem-solving abilities.
+\bigskip
+
+\bg{cvorange}{white}{Personal} \\[0.3em]
+Simone Giampà \\
+\vspace{0.2em}
+\faBirthdayCake \; 21/08/1999 \\
+\vspace{0.2em}
+\faGlobe \; Nationality: Italian \\
+\vspace{0.2em}
+\faMapMarker \; Milan, Italy \\
+
+\bigskip
+
+\bg{cvorange}{white}{Areas of specialization} \\[0.5em]
+
+Artificial Intelligence ~•~ Robotics ~•~ Machine and Deep Learning ~•~ Embedded Systems
+
+\bigskip
+
+\bg{cvorange}{white}{Interests}\\[0.5em]
+
+Aerospace ~•~ Space Exploration ~•~ Robotics ~•~ Artificial Intelligence 
+
+\bigskip
+
+\bg{cvorange}{white}{Programming}\\[0.5em]
+
+    \bg{skilllabelcolour}{iconcolour}{C, C++} \\
+    \bg{skilllabelcolour}{iconcolour}{Java}  \\
+    \bg{skilllabelcolour}{iconcolour}{Python}  \\
+    \bg{skilllabelcolour}{iconcolour}{Matlab}  \\
+    \bg{skilllabelcolour}{iconcolour}{ROS, ROS2} \\
+    \bg{skilllabelcolour}{iconcolour}{Tensorflow, Tensorflow Lite}  \\
+    \bg{skilllabelcolour}{iconcolour}{SQL}  \\
+    \bg{skilllabelcolour}{iconcolour}{\LaTeX} \\
+    
+\bigskip
+
+
+\bg{cvorange}{white}{Hardware Platforms}\\[0.5em]
+
+    \bg{skilllabelcolour}{iconcolour}{Arduino Uno} \\
+    \bg{skilllabelcolour}{iconcolour}{Arduino Nano 33 BLE Sense}  \\
+    \bg{skilllabelcolour}{iconcolour}{STM32F4 Nucleo}  \\
+    \bg{skilllabelcolour}{iconcolour}{ESP32 Wifi} \\
+
+\bigskip
+
+\bg{cvorange}{white}{Languages}\\[0.5em]
+\begin{tabular}{r c | r}
+    mother tongue & C2 & \textbf{Italian} \\
+    proficient & C1 & \textbf{English}
+\end{tabular}
+
+\bigskip
+
+\bg{cvorange}{white}{Certifications}\\[0.5em]
+\begin{tabular}{p{0.15\linewidth} | p{0.7\linewidth}}
+    \textbf{2018} & IELTS Grade 7.5: Level C1 \\
+    \textbf{2017} & B2 First Cambridge \\
+    \textbf{2016} & B1 PET Cambridge  \\
+    \textbf{2015} & Trinity College Grade 6
+\end{tabular}
+\bigskip
+
+\bg{cvorange}{white}{Contacts}\\[0.5em]
+
+\infobubble{\faEnvelopeO}{cvorange}{white}{\href{mailto:simonegiampa99@gmail.com}{Mail}}
+\infobubble{\faPhone}{cvorange}{white}{+39 3505369946} 
+\infobubble{\faLinkedin}{cvorange}{white}{\href{https://it.linkedin.com/in/simone-giampa}{Linkedin Profile}}
+\infobubble{\faGithub}{cvorange}{white}{\href{https://github.com/SimonGiampy}{Github Profile}} 
+
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Education}
+
+\begin{tabular}{r| p{0.45\textwidth} c}
+    
+    \cvevent{2021 - Present}{Master's Degree in Computer Science Engineering }{Politecnico di Milano}{Milan, Italy \color{cvorange}}{Currently attending}{poli.png} \\
+    \cvevent{2018 - 2021}{Bachelor's Degree in Computer Science Engineering}{Politecnico di Milano}{Milan, Italy \color{cvorange}}{Grade: \textbf{101/110}}{poli.png}
+
+\end{tabular}
+
+
+
+\section*{Projects at Politecnico di Milano}
+\begin{tabular}{r| p{0.64\textwidth} }
+
+    \cvproj{2023}{Robot head construction: Robotics and Design multi-disciplinary course}{Workshop Laboratory $\cdot$ 3D printing $\cdot$ Multidisciplinary project}{https://github.com/SimonGiampy/Robotics-and-Design-Polimi}{Multidisciplinary project of Robotics and Design: building and programming of a 3d printed and programmable robot head capable of mimicking human emotions and expressiveness, while interacting with other robots of the other groups} \\
+    
+    \cvproj{2023}{Neural Network for Spoken Language Recognition on an Embedded system}{Tensorflow Lite $\cdot$ Neural Networks $\cdot$ Embedded System}{TODO}{A neural network recognizing the natural language from spoken human conversations. Developed on an Arduino Nano 33 BLE (TinyML kit), with Tensorflow Lite} \\
+    
+    \cvproj{2023}{Natural Language Text Processing with Transformer Models}{Neural Networks $\cdot$ BERT Transformers $\cdot$ Natural Language}{}{Text analysis, sentiment analysis and response generation with BERT Transformer models} \\
+    
+    \cvproj{2023}{Nonlinear ARMA time series classification with Online Machine Learning models}{Streaming Machine Learning $\cdot$ Python $\cdot$ River library}{https://github.com/SimonGiampy/Non-Linear-ARMA-Streaming-ML}{Non-linear ARMA time series generation and classification with streaming (incremental learning) machine learning models in Python using the River ML library} \\
+
+    \cvproj{2022}{Deep Learning: Convolutional Neural Networks}{Tensorflow $\cdot$ Python $\cdot$ Image Classification}{https://github.com/SimonGiampy/Deep-Learning-project-polimi}{Image classification challenge with convolutional neural networks and transfer learning} \\
+
+    \cvproj{2022}{Mobile Robotics projects with ROS and real-world LIDAR and encoders data}{ROS2 $\cdot$ C++ $\cdot$ SLAM $\cdot$ Mobile Robot $\cdot$ Autonomous navigation}{https://github.com/SimonGiampy/ROS-Robotics-Project-2}{Two projects in C++ using ROS aimed at analyzing and computing data coming from mecanum wheels encoders sensors and a LIDAR for autonomous simultaneous localization and mapping (SLAM), mounted on a mobile robot in the Robotics laboratory} \\
+    
+    \cvproj{2022}{STM32 Nucleo with Sensor Systems development board}{Sensors $\cdot$ C $\cdot$ Embedded System}{https://github.com/SimonGiampy/Sensor-Systems-STM32}{Development of many little projects aimed at handling a wide variety of sensors coupled with the STM32 Nucleo board, using FreeRTOS and several wire communication protocols} \\
+    
+    \cvproj{2022}{STM32 Nucleo with Miosix Embedded OS kernel-space programming}{STM32 $\cdot$ Embedded OS programming $\cdot$ C++ $\cdot$ Linux}{https://github.com/SimonGiampy/STM32-Miosix-GameOfLife}{Development of John Conway's Game of Life cellular automaton on an STM32 running Miosix embedded OS in kernel-space and communicating via serial interface with an emulated terminal on a Linux machine} \\
+
+    \cvproj{2021}{SW engineering thesis project: an online multi-player board game}{Java $\cdot$ Game $\cdot$ Group thesis work}{https://github.com/SimonGiampy/Ing_Sw_Progetto_Polimi_2021}{Group project development in Java (terminal and GUI interfaces) of a multi-player online board game: Maestri del Rinascimento} \\
+
+    \cvproj{2021}{LASER dynamics simulation with cellular automata in Matlab and Java}{LASER dynamics $\cdot$ Matlab $\cdot$ Java}{https://github.com/SimonGiampy/LASER-Dynamics-Simulation}{Simulation of LASER quantum dynamics using a cellular automata} \\
+    
+    \cvproj{2021}{Vivado project: image histogram equalization in VHDL}{Xilinx Vivado $\cdot$ VHDL}{https://github.com/SimonGiampy/Progetto_Reti_Logiche_Polimi_2021}{Logic circuit definition of an algorithm for the equalization of a gray-scale image histogram} \\
+
+    \cvproj{2020}{A time and memory efficient command-line text editor in C}{C $\cdot$ Algorithms and Data Structures}{https://github.com/SimonGiampy/API_Polimi_Project-2020}{Time and memory efficient text editor using optimized algorithms and data structures  } \\
+    
+    
+    
+\end{tabular}
+
+\vspace{1em}
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+
+\end{paracol}
+
+\end{document}
