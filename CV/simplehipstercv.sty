@@ -1,4 +1,4 @@
-\usepackage[default]{montserrat}
+\usepackage{montserrat}
 \usepackage[T1]{fontenc}
 
 \usepackage{fontawesome}
@@ -82,16 +82,18 @@
 
 \newcommand{\dotrule}[2]{\begin{figure}[H]\begin{minipage}[t]{#1\textwidth}\tikz \draw[loosely dotted, ultra thick,#2] (0,0) -- (\textwidth,0);\end{minipage}\end{figure}}
 
-
+\newcommand{\bulletseparator}{
+\makebox[0pt][c]{\large$\bullet$}\vrule
+}
 % -----------------------------------------------------------------------------------
 
 \newcommand{\simpleheader}[5]{
 \tikz[remember picture,overlay] {%
 \node[rectangle, fill=#1, anchor=north, minimum width=\paperwidth, minimum height=3.5cm](header) at (current page.north){};%
 \node[draw=none, align=left](name) at (header) {%
-{\Huge \color{#5} #2 \textbf{#3} }%
+{\Large \color{#4} \textbf{#2} }%
 };%
-\node[draw=none, below](description) at (name.south) {\color{white}\large{#4}};% 
+\node[draw=none, below](description) at (name.south) {\color{white}\huge{#3}};
 }\vspace{-0.7cm}%
 }
 
@@ -119,10 +121,37 @@
 {\color{#3}\rule[\baselineskip]{#1\textwidth}{#2}}\vspace{0.5em}
 }
 
-\newcommand{\cvevent}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 ~\faMapMarker}\newline{\color{black!70}\footnotesize #5}\vspace{0.5em} & \raisebox{-0.7\height}{\includegraphics[height=1cm]{#6}}}
 
-\newcommand{\cvcertification}[6]{{#1} & \textbf{#2} \newline{\textsc{#3} $\cdot$ #4} \newline{\color{black!70}\footnotesize #5}\vspace{0.5em} & \raisebox{-0.7\height}{#6}}
 
+% education degree
+\newcommand{\cveducation}[6]{
+{#1} & \textbf{#2}\newline\textsc{#3} \, $\cdot$ \, {#4 \color{cvorange}~\faMapMarker} 
+\newline{\color{black!85}\footnotesize #5}\vspace{0.5em} & 
+\raisebox{-0.7\height}{\includegraphics[height=1cm]{#6}}
+}
+
+% work experience and awards
+
+\newcommand{\cvwork}[7]{
+  % Line 1 & 2: Date | Title/Company | Logo
+  \vbox{\vspace{1em}}
+  #1 & \textbf{#2} \newline {\textsc{#3} $\cdot$ #4} & \raisebox{-0.7\height}{#5} \\
+  % Line 3: Spans columns 2 and 3
+  \multicolumn{1}{r|}{} & \multicolumn{2}{#6}{\color{black!85}\footnotesize #7} 
+}
+ 
+% paper publications: add link in the future
+\newcommand{\cvpublication}[6]{
+\vbox{\vspace{1em}}
+ #1 & \textbf{#2} \newline \textsc{#3} \, $\cdot$ \, {#4 \color{cvorange}~\faMapMarker}
+\newline{\texttt{#5}}
+\newline{\color{black!85}\footnotesize #6}
+}
+
+% certification macro
+\newcommand{\cvcertification}[6]{{#1} & \textbf{#2} \newline{\textsc{#3} \, $\cdot$ \, #4} \newline{\color{black!85}\footnotesize #5}\vspace{0.5em} & \raisebox{-0.7\height}{#6}}
+
+% university projects macro
 \newcommand{\cvproj}[5]{{#1} &
 \textbf{#2}
 \newline{
@@ -130,14 +159,15 @@
 \hfill
 \href{#4}{\underline{\faGithub \; Repository}}
 }
-\newline{\color{black!80}\footnotesize #5} 
+\newline{\color{black!85}\footnotesize #5} 
 \vspace{0.5em} 
 }
 
 
+% master thesis
 \newcommand{\cvthesis}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ \textsc{#4}
 \newline{\texttt{#5}}
-\newline{\color{black!80}\footnotesize #6}}
+\newline{\color{black!85}\footnotesize #6}}
 
 
 

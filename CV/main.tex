@@ -8,7 +8,8 @@
 \usepackage[margin=1cm, a4paper]{geometry}
 \usepackage{hyperref}
 \usepackage{supertabular}
-\usepackage{enumitem} 
+\usepackage{enumitem}
+\usepackage{multirow}
 \hypersetup{
   colorlinks=true,
   urlcolor=blue!70!green,
@@ -36,7 +37,7 @@
 
 \section*{}
 
-\simpleheader{headercolour}{Simone}{Giampà}{Robotics \& Artificial Intelligence Engineering Researcher}{white}
+\simpleheader{headercolour}{Simone Giampà}{Robotics \& AI Research Engineer}{white}
 
 %------------------------------------------------
 
@@ -57,7 +58,7 @@
 \raggedleft
 \color{black}
 \bg{cvorange}{white}{About me}\\[0.5em]
-I am a robotics and artificial intelligence Researcher with a strong interest in aerospace applications, and an academic background in Computer Science Engineering. My research focuses on developing and applying advanced AI techniques, such as deep learning, to solve challenging problems in robotics, including autonomous manipulation, navigation and control.
+I am a Robotics and AI Researcher with a strong interest in aerospace applications, and an academic background in Computer Science Engineering. My research focuses on developing software for robotics systems and applying Deep Learning to solve challenging problems like autonomous manipulation, navigation and control.
 \bigskip
 
 \bg{cvorange}{white}{Personal} \\[0.3em]
@@ -71,15 +72,15 @@ I am a robotics and artificial intelligence Researcher with a strong interest in
 
 \bg{cvorange}{white}{Areas of Expertise} \\[0.5em]
 
-Robotics ~•~ Deep Learning ~•~ Artificial Intelligence ~•~ Computer Vision ~•~ Parallel Computing  ~•~ Embedded Systems  
+Robotics ~•~ Deep Learning ~•~ Artificial Intelligence ~•~ Computer Vision ~•~ Parallel Computing  ~•~ Perception  
 
-\medskip
+\bigskip
 
 \bg{cvorange}{white}{Interests}\\[0.5em]
 
-Robotics ~•~ Artificial Intelligence ~•~ Aerospace ~•~ Space Exploration 
+Robotics ~•~ AI ~•~ AeroSpace
 
-\medskip
+\bigskip
 
 \bg{cvorange}{white}{Contacts}\\[0.5em]
 
@@ -92,31 +93,32 @@ Robotics ~•~ Artificial Intelligence ~•~ Aerospace ~•~ Space Exploration
 
 \bg{cvorange}{white}{Programming}\\[0.5em]
 
-    \bg{skilllabelcolour}{iconcolour}{C} \quad \bg{skilllabelcolour}{iconcolour}{C++} 
-    \quad\bg{skilllabelcolour}{iconcolour}{Java}  \\
-    \bg{skilllabelcolour}{iconcolour}{Python} \quad \bg{skilllabelcolour}{iconcolour}{Matlab} \quad \bg{skilllabelcolour}{iconcolour}{SQL} \\
-    \bg{skilllabelcolour}{iconcolour}{ROS, ROS2, MoveIt2, NAV2} \\
-    \bg{skilllabelcolour}{iconcolour}{Tensorflow, TFLite, TFMicro} \\
-    \bg{skilllabelcolour}{iconcolour}{CUDA C/C++, CUDA Python} \\
-    \bg{skilllabelcolour}{iconcolour}{Pandas, Scikit-Learn, Numpy} \\
+    \bg{skilllabelcolour}{iconcolour}{C} \; \bg{skilllabelcolour}{iconcolour}{C++} 
+    \; \bg{skilllabelcolour}{iconcolour}{Java}  \\[0.1em]
+    \bg{skilllabelcolour}{iconcolour}{Python} \; \bg{skilllabelcolour}{iconcolour}{Matlab} \\[0.1em]
+    \bg{skilllabelcolour}{iconcolour}{ROS2, MoveIt2, Nav2} \\[0.1em]
+    \bg{skilllabelcolour}{iconcolour}{Gazebo, Mujoco, IsaacSim} \\[0.1em]
+    \bg{skilllabelcolour}{iconcolour}{Tensorflow, TFLite, TFMicro} \\[0.1em]
+    \bg{skilllabelcolour}{iconcolour}{PyTorch, TorchVision, TorchRL} \\[0.1em]
+    \bg{skilllabelcolour}{iconcolour}{CUDA C/C++, CUDA Python} \\[0.1em]
+    \bg{skilllabelcolour}{iconcolour}{Pandas, Scikit-Learn, Numpy}
     
 \bigskip
 
-\bg{cvorange}{white}{Robots \& Sensors} \\
-\bg{skilllabelcolour}{iconcolour}{Universal Robot arms} \\
-\bg{skilllabelcolour}{iconcolour}{AgileX Scout Mobile Robot} \\
-\bg{skilllabelcolour}{iconcolour}{Igus Rebel robotic Arm 6DoF}  \\
-\bg{skilllabelcolour}{iconcolour}{LIDAR} \quad \bg{skilllabelcolour}{iconcolour}{RGB-Depth camera} \\
-\bg{skilllabelcolour}{iconcolour}{IMU} \quad \bg{skilllabelcolour}{iconcolour}{Soft Pneumatic Gripper}
+\bg{cvorange}{white}{Robots \& Sensors} \\[0.5em]
+\bg{skilllabelcolour}{iconcolour}{Universal Robots arms} \\[0.1em]
+\bg{skilllabelcolour}{iconcolour}{Robotnik mobile robots} \\[0.1em]
+\bg{skilllabelcolour}{iconcolour}{AgileX Scout mobile robot} \\[0.1em]
+\bg{skilllabelcolour}{iconcolour}{Igus Rebel robotic arm}  \\[0.1em]
+\bg{skilllabelcolour}{iconcolour}{3D LiDAR} \; \bg{skilllabelcolour}{iconcolour}{RGB-D cameras} \\[0.1em]
 
 \bigskip
 
-\bg{cvorange}{white}{Micro-controllers}\\[0.5em]
+\bg{cvorange}{white}{Embedded Systems}\\[0.5em]
 
-    \bg{skilllabelcolour}{iconcolour}{Arduino Uno} \\ [0.1em]
-    \bg{skilllabelcolour}{iconcolour}{Arduino Nano 33 BLE Sense}  \\ [0.1em]
-    \bg{skilllabelcolour}{iconcolour}{STM32F4 Nucleo}  \\ [0.1em]
-    \bg{skilllabelcolour}{iconcolour}{ESP32 Wifi} 
+    \bg{skilllabelcolour}{iconcolour}{Arduino Uno, Nano} \\ [0.1em]
+    \bg{skilllabelcolour}{iconcolour}{STM32 Nucleo} \; \bg{skilllabelcolour}{iconcolour}{ESP32} \\ [0.1em]
+     
 
 \bigskip
 
@@ -142,80 +144,133 @@ Robotics ~•~ Artificial Intelligence ~•~ Aerospace ~•~ Space Exploration
 \end{leftcolumn}
 %-----------------------------------------------------------
 %\switchcolumn
+
+% shorten gap between paragraphs
+\renewcommand{\arraystretch}{0.4} % Adjust the value as needed
+
 \begin{rightcolumn}
 \small
-\section*{Education}
-
-\begin{tabular}{r| p{0.45\textwidth} c}
-    \cvevent{2021 - 2024}{Master's Degree in Computer Science Engineering }{Politecnico di Milano}{Milan, Italy \color{cvorange}}{\textbf{Robotics \& Deep Learning specialization} - Grade: 106/110}{poli.png} \\
-    \cvevent{2018 - 2021}{Bachelor's Degree in Computer Science Engineering}{Politecnico di Milano}{Milan, Italy \color{cvorange}}{Grade: 101/110}{poli.png}
-\end{tabular}
 
 \section*{Work Experience}
-\renewcommand{\arraystretch}{0.4} % Adjust the value as needed
-\begin{tabular}{r | p{0.4\textwidth}  c}
- 2024 - Present & \textbf{Robotics and Autonomous Systems Researcher} \newline \textsc{Leonardo Innovation Labs} $\cdot$ Genoa, Italy ~ \color{cvorange}\faMapMarker & \raisebox{-0.7\height}{\includegraphics[width=2cm]{leonardo_logo.png}} \\ 
-   & \multicolumn{2}{p{0.55\textwidth}}{\color{black!80}\footnotesize 
-\textbf{Industrial Research on Autonomous Robotics and Deep Learning}: working on several research projects aiming at producing patents and publications in renowned robotics conferences. Focusing on autonomous manipulation tasks and control of mobile manipulator arms. Currently working on:
-\setlist{leftmargin=1em, itemsep=0pt} % Adjust the value as needed
-\begin{itemize}
-\item \textbf{Mars Sample Return Project}: a joint collaboration with Leonardo Space, ESA and NASA institutions, for the autonomous control and computer vision tasks of the Mars Sample Retriever Arm.
-\item \textbf{MATISSE}: European project collaboration for In-Orbit-Servicing robotic tasks digital twin simulation.
-\item \textbf{Autonomous Control of Redundant Robotic Arm} for industrial assembly process of large fuselage frames.
+
+\begin{tabular}{r !{\bulletseparator} p{0.47\textwidth}  c}
+
+\cvwork{\multirow{2}{*}{\shortstack{2024 \\[0.6em] --- \\ Present}}}
+{Robotics and Artificial Intelligence Research Engineer}
+{Leonardo Innovation Labs}{Genoa, Italy \color{cvorange}~\faMapMarker}
+{\includegraphics[width=2cm]{leonardo_logo.png}}
+{p{0.6\textwidth}}
+{\textbf{Industrial Research on Autonomous Robotics and Deep Learning}: working on several research and industrial projects aiming at producing patents and publications in renowned robotics conferences. Main focus on autonomous manipulation tasks for control of mobile manipulator arms, and perception of environment via computer vision algorithms and deep learning models. Currently working on:
+\setlist{leftmargin=1em, itemsep=0pt} % left margin in list, reduce items separation
+\begin{itemize}[label=$\circ$]
+\item \textbf{GCAP Project}: autonomous robotic maintenance of future jet aircraft.
+\item \textbf{Robotic Edge Sealing Project}: automated assembly process of large fuselage frames in industrial environment with a redundant robotic arm.
+\item \textbf{Mars Sample Return Project}: a joint collaboration with Leonardo Space, ESA and NASA institutions, for the autonomous control of the Mars Sample Retriever Arm, and computer vision tasks for pose estimation of the samples to be collected.
+\item \textbf{MATISSE Project}: European project collaboration for the digital twin simulation of On-Orbit-Servicing robotic tasks.
+
 \end{itemize}
 }
- \end{tabular}
- 
-\section*{Certifications}
+\end{tabular}
 
-\begin{tabular}{r | p{0.51\textwidth} c}
+%-----------------------------------------------------------
 
-\cvcertification{2024}{Accelerated Computing with CUDA C/C++}{Nvidia Deep Learning Institute}{\href{https://learn.nvidia.com/certificates?id=M6jS7p7FRhmhXXMu4Z_t6g}{Certificate}}{Programming and exercises on CUDA C/C++ and acceleration of custom CUDA kernel with concurrent data streams and performance profiling}{\includegraphics[width=2cm]{nvidia-logo.png}} \\
-\cvcertification{2024}{Accelerated Computing with CUDA Python}{Nvidia Deep Learning Institute}{\href{https://learn.nvidia.com/certificates?id=CR-g0KpOR02Jye_ZNDyQTg}{Certificate}}{Programming with Python-based CUDA kernels acceleration with Numba library and kernel performance profiling}{\includegraphics[width=2cm]{nvidia-logo.png}} \\
-\cvcertification{2024}{Accelerating Data-Science and Machine Learning Workflows}{Nvidia Deep Learning Institute}{\href{https://learn.nvidia.com/certificates?id=DHSO_ayiRNq-8NLGQCp45Q}{Certificate}}{Exercises on Data Science and Analytics using GPU-accelerated libraries: cuDF (Pandas), cuML (Scikit-Learn) and cuPy (Numpy)}{\includegraphics[width=2cm]{nvidia-logo.png}}
+\section*{Publications}
+
+\begin{tabular}{r !{\bulletseparator} p{0.62\textwidth}  c}
+
+\cvpublication{2025}{Inverse Kinematics for Path-Tracking of Redundant Robots on a Linear Axis}
+{Leonardo Innovation Labs}{IAS Conference, Genoa, Italy}
+{Autonomous Robotics $\cdot$ Inverse Kinematics $\cdot$ ROS2 $\cdot$ Redundant Robot}
+{This paper presents a trajectory generation framework for continuous path-tracking on a 7-DoF redundant manipulator (6-DoF arm integrated with a linear axis). By leveraging the system's kinematic redundancy through a multi-objective optimization approach, the method ensures joint-limit avoidance while tracking complex paths in an real industrial use case.}
+\end{tabular}
+
+%-----------------------------------------------------------
+
+\section*{Awards}
+
+\begin{tabular}{r !{\bulletseparator} p{0.52\textwidth}  c}
+
+\cvwork{2025}{Igus ROIBOT Award for Low-Cost Automation}{Igus Low-Cost Autonomy}{\href{https://www.deib.polimi.it/ita/notizie/dettagli/1401}{\underline{Award and Project Description}}}
+{\includegraphics[width=1.5cm]{Igus_logo.png}}
+{p{0.62\textwidth}}
+{My thesis project won the first place of this Award in the university category, a competition in which universities and companies participated from all over the world. My project was awarded for its high impact, creativity and novelty for agricultural applications focused on reducing environmental impact.}
 
 \end{tabular}
 
+%-----------------------------------------------------------
+
+\section*{Education}
+
+\begin{tabular}{r !{\bulletseparator} p{0.47\textwidth} c}
+
+    \cveducation{2021 --- 2024}{Master's Degree in Computer Science Engineering }{Politecnico di Milano}{Milan, Italy}{\textbf{Robotics \& Deep Learning specialization} - Grade: 106/110}{poli.png} \\
+    \cveducation{2018 --- 2021}{Bachelor's Degree in Computer Science Engineering}{Politecnico di Milano}{Milan, Italy}{Grade: 101/110}{poli.png}
+    
+\end{tabular}
+
+%-----------------------------------------------------------
+
+\section*{Certifications}
+
+\begin{tabular}{r !{\bulletseparator} p{0.51\textwidth} c}
+
+\cvcertification{2024}{Accelerated Computing with CUDA C/C++}{Nvidia Deep Learning Institute}
+{\href{https://learn.nvidia.com/certificates?id=M6jS7p7FRhmhXXMu4Z_t6g}{\underline{Certificate}}}
+{Programming and exercises on CUDA C/C++ and acceleration of custom CUDA kernel with concurrent data streams and performance profiling}
+{\includegraphics[width=2cm]{nvidia-logo.png}} \\
+
+\cvcertification{2024}{Accelerated Computing with CUDA Python}{Nvidia Deep Learning Institute}
+{\href{https://learn.nvidia.com/certificates?id=CR-g0KpOR02Jye_ZNDyQTg}{\underline{Certificate}}}
+{Programming with Python-based CUDA kernels acceleration with Numba library and kernel performance profiling}{\includegraphics[width=2cm]{nvidia-logo.png}} \\
+
+\cvcertification{2024}{Accelerating Data-Science and Machine Learning Workflows}
+{Nvidia Deep Learning Institute}{\href{https://learn.nvidia.com/certificates?id=DHSO_ayiRNq-8NLGQCp45Q}{\underline{Certificate}}}
+{Exercises on Data Science and Analytics using GPU-accelerated libraries: cuDF (Pandas), cuML (Scikit-Learn) and cuPy (Numpy)}
+{\includegraphics[width=2cm]{nvidia-logo.png}}
+
+\end{tabular}
+
+%-----------------------------------------------------------
 \section*{Master's Thesis Project}
 
-\begin{tabular}{r| p{0.63\textwidth}}
+\begin{tabular}{r !{\bulletseparator} p{0.63\textwidth}}
     \cvthesis{2024}{Development of an Autonomous Mobile Manipulation Robot for Industrial and Agricultural Environments}{Polimi}{Artificial Intelligence and Robotics Laboratory (\textbf{AIRLAB})}
     {Autonomous Robotics Systems $\cdot$ SLAM $\cdot$ ROS2 $\cdot$ Nav2 $\cdot$ MoveIt2}
     {Development of an autonomous mobile manipulation system, composed of a mobile wheeled robot, and a 6-DoF robotic arm manipulator, with a soft pneumatic gripper acting as a robotic hand. 
     The system performs several tasks in industrial environments, such as exploration, navigation of an industrial plant, and interactions with control panels. The robotic system is also programmed to collect fruit from a tree, a demo simulation of a fruit picking task in realistic agricultural environments.
-    The whole system comprises of a multitude of sensors and actuators, including a LIDAR for navigation and mapping, stereo cameras, IMU.
+    The whole system comprises of a multitude of sensors and actuators.
     The mobile manipulator performs object grasping and interaction tasks completely autonomously. 
-    The localization, navigation and mapping of the mobile robot base is done using NAV2. 
-    The trajectory planning and motion execution of the robotic arm is done with MoveIt2. 
     Every component in the system is controlled via ROS2 and the combination of the tasks is orchestrated via complex robot behavior trees.}
 \end{tabular}
 
+%-----------------------------------------------------------
+
 \section*{University Projects}
 
-\begin{tabular}{r| p{0.64\textwidth} }
-
-    \cvproj{2023}{Robot head construction: Robotics and Design multi-disciplinary course}{Workshop Laboratory $\cdot$ 3D printing $\cdot$ Multidisciplinary project}{https://github.com/SimonGiampy/Robotics-and-Design-Polimi}{Multidisciplinary project of Robotics and Design: building and programming of a 3d printed and programmable robot head capable of mimicking human emotions and expressiveness, while interacting with other robots of the other student groups.} \\
+\begin{tabular}{r !{\bulletseparator} p{0.62\textwidth} }
+    \vbox{\vspace{1em}}
+    \cvproj{2023}{Robot head construction: Robotics and Design multi-disciplinary course}{Workshop Laboratory $\cdot$ 3D printing $\cdot$ Multidisciplinary}{https://github.com/SimonGiampy/Robotics-and-Design-Polimi}{Multidisciplinary project of Robotics and Design: building and programming of a 3d printed and programmable robot head capable of mimicking human emotions and expressiveness, while interacting with other robots of the other student groups.} \\
     
-    \cvproj{2023}{Neural Network for Spoken Language Recognition on an Embedded system}{Tensorflow Lite \& Micro $\cdot$ Neural Networks $\cdot$ Embedded Systems}{https://github.com/SimonGiampy/Spoken_Language_Recognition_Tensorflow_Embedded/}{Neural network recognizing the language a person is speaking, from mel spectrogram features. Developed on an Arduino Nano (TinyML kit) with TensorFlow Lite for Microcontrollers.} \\
+    \cvproj{2023}{Neural Network for Spoken Language Recognition on an Embedded system}{Tensorflow Lite Micro $\cdot$ Neural Networks $\cdot$ Embedded Systems}{https://github.com/SimonGiampy/Spoken_Language_Recognition_Tensorflow_Embedded/}{Neural network recognizing the language a person is speaking, from mel spectrogram features. Developed on an Arduino Nano (TinyML kit) with TensorFlow Lite for Microcontrollers.} \\
     
     \cvproj{2023}{Natural Language Text Processing with Transformer Models}{Neural Networks $\cdot$ BERT Transformers $\cdot$ Natural Language}{https://github.com/SimonGiampy/Natural-Language-Processing-Sentiment-Analysis/}{Text analysis, sentiment analysis and response generation with BERT Transformer models. Fine-tuning of small scale Large Language Models (LLM)} \\
     
-    \cvproj{2023}{Nonlinear ARMA time series classification with Online Machine Learning models}{Streaming Machine Learning $\cdot$ Python $\cdot$ River library}{https://github.com/SimonGiampy/Non-Linear-ARMA-Streaming-ML}{Non-linear ARMA time series generation and classification with streaming (incremental learning) machine learning models in Python using the River ML library. Data Analysis and statistical interpretation of forecast data} \\
+    \cvproj{2023}{Nonlinear Time Series Classification with Online Machine Learning Models}{Streaming Machine Learning $\cdot$ Python $\cdot$ River library}{https://github.com/SimonGiampy/Non-Linear-ARMA-Streaming-ML}{Non-linear ARMA time series generation and classification with streaming (incremental learning) machine learning models in Python using the River ML library. Data Analysis and statistical interpretation of forecast data} \\
 
     \cvproj{2022}{Deep Learning: Convolutional Neural Networks and Transfer Learning}{Tensorflow $\cdot$ Python $\cdot$ Image Classification}{https://github.com/SimonGiampy/Deep-Learning-project-polimi}{Image classification challenge with convolutional neural networks and transfer learning of large pre-trained models. Time-series classification challenge with convolutional spectral features.} \\
 
     \cvproj{2022}{Mobile Robotics projects with ROS and real-world LIDAR and encoders data}{ROS $\cdot$ C++ $\cdot$ SLAM $\cdot$ Mobile Robot $\cdot$ Autonomous navigation}{https://github.com/SimonGiampy/ROS-Robotics-Project-2}{Two projects using ROS for data analysis of mecanum wheels encoders, IMU sensors and a LIDAR for autonomous simultaneous localization and mapping (SLAM)} \\
     
-    \cvproj{2022}{STM32 Nucleo with Sensor Systems development board}{Sensors $\cdot$ C $\cdot$ Microcontroller $\cdot$ Electronics}{https://github.com/SimonGiampy/Sensor-Systems-STM32}{Development of many small projects aimed at handling a wide variety of sensors connected to the STM32 Nucleo board, using FreeRTOS and several wire communication protocols.} \\
+    \cvproj{2022}{STM32 Nucleo with Sensor Systems development board}{C $\cdot$ Sensors $\cdot$ Microcontroller $\cdot$ Electronics}{https://github.com/SimonGiampy/Sensor-Systems-STM32}{Development of many small projects aimed at handling a wide variety of sensors connected to the STM32 Nucleo board, using FreeRTOS and several wire communication protocols.} \\
     
-    \cvproj{2022}{STM32 Nucleo with Miosix Embedded OS kernel-space programming}{STM32 $\cdot$ Embedded OS programming $\cdot$ C++ $\cdot$ Linux}{https://github.com/SimonGiampy/STM32-Miosix-GameOfLife}{Development of the \textit{Game of Life} cellular automaton on an STM32 running an embedded OS in kernel-space, using a serial interface with an emulated terminal on a Linux machine for visualization of the automaton evolving matrix} \\
+    \cvproj{2022}{STM32 Nucleo with Miosix Embedded OS kernel-space programming}{C++ $\cdot$ Embedded OS programming $\cdot$ STM32 $\cdot$ Linux}{https://github.com/SimonGiampy/STM32-Miosix-GameOfLife}{Development of the \textit{Game of Life} cellular automaton on an STM32 running an embedded OS in kernel-space, using a serial interface with an emulated terminal on a Linux machine for visualization of the automaton evolving matrix} \\
 
      \cvproj{2021}{Software Engineering project: an online multi-player board game}{Java $\cdot$ Game $\cdot$ Large group project $\cdot$ Git}{https://github.com/SimonGiampy/Ing_Sw_Progetto_Polimi_2021}{Group project development in Java of a multi-player online board game.
      Large project developed with extensive software engineering principles and applications of a variety of code design patterns.} \\
 
     \cvproj{2021}{LASER dynamics simulation with cellular automata in Matlab and Java}{LASER dynamics $\cdot$ Matlab $\cdot$ Java}{https://github.com/SimonGiampy/LASER-Dynamics-Simulation}{Simulation of LASER quantum dynamics of population inversion using a cellular automaton} \\
     
-    \cvproj{2021}{Vivado project: image histogram equalization in VHDL}{Xilinx Vivado $\cdot$ VHDL}{https://github.com/SimonGiampy/Progetto_Reti_Logiche_Polimi_2021}{Logic circuit programming in VHDL of an equalization algorithm of a gray-scale image histogram} \\
+    \cvproj{2021}{Vivado project: image histogram equalization in VHDL}{Vivado Xilinx $\cdot$ VHDL $\cdot$ FPGA}{https://github.com/SimonGiampy/Progetto_Reti_Logiche_Polimi_2021}{Logic circuit programming in VHDL of an equalization algorithm of a gray-scale image histogram} \\
 
     \cvproj{2020}{A time and memory efficient command-line text editor in C}{C $\cdot$ Algorithms and Data Structures}{https://github.com/SimonGiampy/API_Polimi_Project-2020}{Time and memory efficient text editor using optimized algorithms and data structures  } \\
     
