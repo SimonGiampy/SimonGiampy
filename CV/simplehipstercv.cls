@@ -26,7 +26,7 @@
 \DeclareOption{pastel}{
 % Farben
 \definecolor{headerblue}{HTML}{6978B6}
-\definecolor{cvorange}{HTML}{F7A072}
+\definecolor{cvorange}{HTML}{4A8E62}%{de6449}
 \definecolor{cvpurple}{HTML}{B66978}
 
 \definecolor{cvred}{HTML}{B66978}
@@ -44,13 +44,13 @@
 %\backgroundcolor{C[1](0.5\columnsep,10000pt)(10000pt,10000pt)}[rgb]{1,1,1}
 }
 
-\definecolor{sidebar}{HTML}{EBEFF5}
+\definecolor{sidebar}{HTML}{EDF5FC}
 \definecolor{labelcolour}{HTML}{000000}
 \definecolor{iconcolour}{HTML}{FFFFFF}
-\definecolor{headercolour}{HTML}{2D3047}
+\definecolor{headercolour}{HTML}{1A659E}
 \definecolor{headerfontbox}{HTML}{000000}
 \definecolor{headerfontboxfont}{HTML}{FFFFFF}
-\definecolor{skilllabelcolour}{HTML}{E15554}
+\definecolor{skilllabelcolour}{HTML}{3275C2}
 }
 
 % ---------------------------------------------------------------------------

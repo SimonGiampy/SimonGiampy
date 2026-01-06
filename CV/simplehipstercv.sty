@@ -1,7 +1,7 @@
 \usepackage{montserrat}
 \usepackage[T1]{fontenc}
 
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 \usepackage{hyperref}
 \setlength{\parindent}{0cm}
 \usepackage{paracol}
@@ -122,7 +122,6 @@
 }
 
 
-
 % education degree
 \newcommand{\cveducation}[6]{
 {#1} & \textbf{#2}\newline\textsc{#3} \, $\cdot$ \, {#4 \color{cvorange}~\faMapMarker} 
@@ -135,7 +134,7 @@
 \newcommand{\cvwork}[7]{
   % Line 1 & 2: Date | Title/Company | Logo
   \vbox{\vspace{1em}}
-  #1 & \textbf{#2} \newline {\textsc{#3} $\cdot$ #4} & \raisebox{-0.7\height}{#5} \\
+  #1 & \textbf{#2} \newline {\textsc{#3} \, $\cdot$ \, #4} & \raisebox{-0.7\height}{#5} \\
   % Line 3: Spans columns 2 and 3
   \multicolumn{1}{r|}{} & \multicolumn{2}{#6}{\color{black!85}\footnotesize #7} 
 }
@@ -149,14 +148,16 @@
 }
 
 % certification macro
-\newcommand{\cvcertification}[6]{{#1} & \textbf{#2} \newline{\textsc{#3} \, $\cdot$ \, #4} \newline{\color{black!85}\footnotesize #5}\vspace{0.5em} & \raisebox{-0.7\height}{#6}}
+\newcommand{\cvcertification}[6]{
+{#1} & \textbf{#2} \newline{\textsc{#3} \, $\cdot$ \, #4} \newline{\color{black!85}\footnotesize #5} & \raisebox{-0.7\height}{#6}
+}
 
 % university projects macro
 \newcommand{\cvproj}[5]{{#1} &
 \textbf{#2}
 \newline{
 \texttt{#3}
-\hfill
+\hfill % fill horizontal space so that the repo link is right-aligned
 \href{#4}{\underline{\faGithub \; Repository}}
 }
 \newline{\color{black!85}\footnotesize #5} 
@@ -165,9 +166,13 @@
 
 
 % master thesis
-\newcommand{\cvthesis}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ \textsc{#4}
-\newline{\texttt{#5}}
-\newline{\color{black!85}\footnotesize #6}}
+\newcommand{\cvthesis}[7]{
+\vbox{\vspace{1em}}
+#1 & \textbf{#2} \hfill #3 
+\newline{\textsc{#4} \, $\cdot$ \, \textsc{#5}}
+\newline{\texttt{#6}}
+\newline{\color{black!85}\footnotesize #7}
+}
 
 
 
