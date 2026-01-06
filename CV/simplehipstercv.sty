@@ -5,32 +5,10 @@
 \usepackage{hyperref}
 \setlength{\parindent}{0cm}
 \usepackage{paracol}
-\usepackage{ifthen}
 
-\usepackage{tikz}
-\usepackage{tikz-3dplot}
 \usepackage{smartdiagram}
 \usepackage{float}
-
 \usepackage{array}
-%\setlength\extrarowheight{1.5em} % adds some spacing between the lines of the CV's tabulars
-% not used here as not to interfer with other tables
-\usetikzlibrary{decorations.text}
-\usetikzlibrary{fadings}
-\usetikzlibrary{calc}
-
-\usetikzlibrary{shapes.misc,positioning}
-\usetikzlibrary{arrows}
-\usetikzlibrary{arrows.meta}
-\usetikzlibrary{backgrounds} 
-\usetikzlibrary{shadings}
-\usetikzlibrary{calendar} 
-\usetikzlibrary{er}
-\usetikzlibrary{patterns} % horizontal lines, vertical lines, north east lines, north west lines, grid, crosshatch, dots, crosshatch dots, fivepointed stars, sixpointed stars, bricks
-\usetikzlibrary{shapes} 
-\usetikzlibrary{shapes.geometric}
-\usetikzlibrary{decorations}
-\usetikzlibrary{topaths}
 
 \usepackage{graphicx}
 %\usepackage[usenames, dvipsnames]{color} 
@@ -50,15 +28,6 @@
 \titlespacing{\section}{0pt}{12pt}{2pt} % Spacing around titles {<left spacing>}{<before spacing>}{<after spacing>}
 %----------------------------------------------------
  
-\usepackage{smartdiagram}
-%------------------------------------ pictoFraction
-\newcommand{\icon}[3]{\phantom{x}{#3\color{#2}#1}\phantom{x}}
-%------------------- pictogram Fraction: pictoFraction
-\newcommand{\pictofraction}[6]{%
-\pgfmathparse{#3 - 1}\foreach \n in {0,...,\pgfmathresult}{\icon{#1}{#2}{#6}}%
-\pgfmathparse{#5 - 1}\foreach \n in {0,...,\pgfmathresult}{\icon{#1}{#4}{#6}}%
-}
-
 
 %----------------------------------------------------- font highlighting / boxes with background color 
 \newcommand{\bg}[3]{\colorbox{#1}{\bfseries\color{#2}#3}}
@@ -87,14 +56,22 @@
 }
 % -----------------------------------------------------------------------------------
 
-\newcommand{\simpleheader}[5]{
-\tikz[remember picture,overlay] {%
-\node[rectangle, fill=#1, anchor=north, minimum width=\paperwidth, minimum height=3.5cm](header) at (current page.north){};%
-\node[draw=none, align=left](name) at (header) {%
-{\Large \color{#4} \textbf{#2} }%
-};%
-\node[draw=none, below](description) at (name.south) {\color{white}\huge{#3}};
-}\vspace{-0.7cm}%
+\newcommand{\simpleheader}[4]{% #1: Background Color, #2: Name, #3: Subtitle, #4: Text Color
+\begin{minipage}[t][3.5cm][c]{\textwidth}
+    \begin{tikzpicture}[remember picture, overlay]
+        % Background rectangle
+        \node[rectangle, fill=#1, anchor=north, 
+              minimum width=\paperwidth, minimum height=3.5cm] 
+              (header) at (current page.north){};
+        
+        % Text Content
+        \node[align=center, anchor=south, yshift=0.5cm] at (header.south) {
+            {\Large \color{#4} \textbf{#2}}\\[0.5em]
+            {\huge \color{white} #3}
+        };
+    \end{tikzpicture}
+\end{minipage}
+\par\vspace{-1em} % Ensure the baseline is reset
 }
 
 
@@ -124,7 +101,7 @@
 
 % education degree
 \newcommand{\cveducation}[6]{
-{#1} & \textbf{#2}\newline\textsc{#3} \, $\cdot$ \, {#4 \color{cvorange}~\faMapMarker} 
+{#1} & \textbf{#2}\newline\textsc{#3} \, $\cdot$ \, {#4 \color{cvgreen}~\faMapMarker} 
 \newline{\color{black!85}\footnotesize #5}\vspace{0.5em} & 
 \raisebox{-0.7\height}{\includegraphics[height=1cm]{#6}}
 }
@@ -142,7 +119,7 @@
 % paper publications: add link in the future
 \newcommand{\cvpublication}[6]{
 \vbox{\vspace{1em}}
- #1 & \textbf{#2} \newline \textsc{#3} \, $\cdot$ \, {#4 \color{cvorange}~\faMapMarker}
+ #1 & \textbf{#2} \newline \textsc{#3} \, $\cdot$ \, {#4 \color{cvgreen}~\faMapMarker}
 \newline{\texttt{#5}}
 \newline{\color{black!85}\footnotesize #6}
 }
@@ -169,6 +146,7 @@
 \newcommand{\cvthesis}[7]{
 \vbox{\vspace{1em}}
 #1 & \textbf{#2} \hfill #3 
+\vspace{0.2em}
 \newline{\textsc{#4} \, $\cdot$ \, \textsc{#5}}
 \newline{\texttt{#6}}
 \newline{\color{black!85}\footnotesize #7}

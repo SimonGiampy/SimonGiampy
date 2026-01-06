@@ -28,40 +28,43 @@
 \author{Simone Giampà}
 \date{January 2025}
 
-\pagestyle{empty}
+\pagestyle{empty} % disable page numbering
+
 \begin{document}
 
-
-\thispagestyle{empty}
 %-------------------------------------------------------------
 
-\section*{}
+%\section*{}
 
 \simpleheader{headercolour}{Simone Giampà}{Robotics \& AI Research Engineer}{white}
 
 %------------------------------------------------
 
-\subsection*{}
-\vspace{6.07em}
-\setlength{\columnsep}{3em}
+%\subsection*{}
 
 \columnratio{0.25}[0.7]
 
 \begin{paracol}{2}
+
+% settings of column ratio and separation margin
+\setlength{\columnsep}{3em}
+\columnratio{0.25}
+
+% Define the sidebar color globally for the column
+% define the margins for the left column
 \backgroundcolor{c[0](1cm,1cm)(0.5cm,100cm)}{sidebar}
-%\paracolbackgroundoptions
 
 \begin{leftcolumn}
-
 \footnotesize
 {
 \raggedleft
+\vspace{-0.5em} % push text upwards
 \color{black}
-\bg{cvorange}{white}{About me}\\[0.5em]
+\bg{cvgreen}{white}{About me}\\[0.5em]
 I am a Robotics and AI Researcher with a strong interest in aerospace applications, and an academic background in Computer Science Engineering. My research focuses on developing software for robotics systems and applying Deep Learning to solve challenging problems like autonomous manipulation, navigation and control.
 \bigskip
 
-\bg{cvorange}{white}{Personal} \\[0.3em]
+\bg{cvgreen}{white}{Personal} \\[0.5em]
 \faBirthdayCake \; 21/08/1999 \\
 \vspace{0.2em}
 \faGlobeEurope \; Nationality: Italian \\
@@ -70,28 +73,28 @@ I am a Robotics and AI Researcher with a strong interest in aerospace applicatio
 
 \bigskip
 
-\bg{cvorange}{white}{Areas of Expertise} \\[0.5em]
+\bg{cvgreen}{white}{Areas of Expertise} \\[0.5em]
 
 Robotics ~•~ Deep Learning ~•~ Artificial Intelligence ~•~ Computer Vision ~•~ Parallel Computing  ~•~ Perception  
 
 \bigskip
 
-\bg{cvorange}{white}{Interests}\\[0.5em]
+\bg{cvgreen}{white}{Interests}\\[0.5em]
 
 Robotics ~•~ AI ~•~ AeroSpace
 
 \bigskip
 
-\bg{cvorange}{white}{Contacts}\\[0.5em]
+\bg{cvgreen}{white}{Contacts}\\[0.5em]
 
-\infobubble{\faEnvelope}{cvorange}{white}{\href{mailto:simonegiampa99@gmail.com}{simonegiampa99@gmail.com}}
-\infobubble{\faPhone}{cvorange}{white}{+39 3505369946} 
-\infobubble{\faLinkedin}{cvorange}{white}{\href{https://it.linkedin.com/in/simone-giampa}{Linkedin Profile}}
-\infobubble{\faGithub}{cvorange}{white}{\href{https://github.com/SimonGiampy}{Github Profile}} 
+\infobubble{\faEnvelope}{cvgreen}{white}{\href{mailto:simonegiampa99@gmail.com}{simonegiampa99@gmail.com}}
+\infobubble{\faPhone}{cvgreen}{white}{+39 3505369946} 
+\infobubble{\faLinkedin}{cvgreen}{white}{\href{https://it.linkedin.com/in/simone-giampa}{Linkedin Profile}}
+\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/SimonGiampy}{Github Profile}} 
 
-\bigskip
+\vspace{2.5em}
 
-\bg{cvorange}{white}{Programming}\\[0.5em]
+\bg{cvgreen}{white}{Programming}\\[0.5em]
 
     \bg{skilllabelcolour}{iconcolour}{C} \; \bg{skilllabelcolour}{iconcolour}{C++} 
     \; \bg{skilllabelcolour}{iconcolour}{Java}  \\[0.1em]
@@ -105,7 +108,7 @@ Robotics ~•~ AI ~•~ AeroSpace
     
 \bigskip
 
-\bg{cvorange}{white}{Robots \& Sensors} \\[0.5em]
+\bg{cvgreen}{white}{Robots \& Sensors} \\[0.5em]
 \bg{skilllabelcolour}{iconcolour}{Universal Robots arms} \\[0.1em]
 \bg{skilllabelcolour}{iconcolour}{Robotnik mobile robots} \\[0.1em]
 \bg{skilllabelcolour}{iconcolour}{AgileX Scout mobile robot} \\[0.1em]
@@ -114,7 +117,7 @@ Robotics ~•~ AI ~•~ AeroSpace
 
 \bigskip
 
-\bg{cvorange}{white}{Embedded Systems}\\[0.5em]
+\bg{cvgreen}{white}{Embedded Systems}\\[0.5em]
 
     \bg{skilllabelcolour}{iconcolour}{Arduino Uno, Nano} \\ [0.1em]
     \bg{skilllabelcolour}{iconcolour}{STM32 Nucleo} \; \bg{skilllabelcolour}{iconcolour}{ESP32} \\ [0.1em]
@@ -149,6 +152,7 @@ Robotics ~•~ AI ~•~ AeroSpace
 \renewcommand{\arraystretch}{0.4} % Adjust the value as needed
 
 \begin{rightcolumn}
+\vspace{-2em}
 \small
 
 \section*{Work Experience}
@@ -157,13 +161,13 @@ Robotics ~•~ AI ~•~ AeroSpace
 
 \cvwork{\multirow{2}{*}{\shortstack{2024 \\[0.6em] --- \\ Present}}}
 {Robotics and Artificial Intelligence Research Engineer}
-{Leonardo Innovation Labs}{Genoa, Italy \color{cvorange}~\faMapMarker}
+{Leonardo Innovation Labs}{Genoa, Italy \color{cvgreen}~\faMapMarker}
 {\includegraphics[width=2cm]{leonardo_logo.png}}
 {p{0.6\textwidth}}
 {\textbf{Industrial Research on Autonomous Robotics and Deep Learning}: working on several research and industrial projects aiming at producing patents and publications in renowned robotics conferences. Main focus on autonomous manipulation tasks for control of mobile manipulator arms, and perception of environment via computer vision algorithms and deep learning models. Currently working on:
 % reduce left and bottom margin, reduce separation between items, add empty circle as item
 \begin{itemize}[label=$\circ$, leftmargin=1em, itemsep=0pt, after=\vspace{-1em}] 
-\item \textbf{GCAP Project}: autonomous robotic maintenance of future jet aircraft.
+\item \textbf{GCAP Project}: autonomous robotic maintenance of future jet aircrafts.
 \item \textbf{Robotic Edge Sealing Project}: automated assembly process of large fuselage frames in industrial environment with a redundant robotic arm.
 \item \textbf{Mars Sample Return Project}: a joint collaboration with Leonardo Space, ESA and NASA institutions, for the autonomous control of the Mars Sample Retriever Arm, and computer vision tasks for pose estimation of the samples to be collected.
 \item \textbf{MATISSE Project}: European project collaboration for the digital twin simulation of On-Orbit-Servicing robotic manipulation and vision tasks.
@@ -214,12 +218,12 @@ Robotics ~•~ AI ~•~ AeroSpace
 \begin{tabular}{r !{\bulletseparator} p{0.51\textwidth} c}
 
 \cvcertification{2025}{SPACERAISE International Summer School: AI for AeroSpace}
-{Gran Sasso Science Institute}{L'Aquila, Italy \color{cvorange}~\faMapMarker}
+{Gran Sasso Science Institute}{L'Aquila, Italy \color{cvgreen}~\faMapMarker}
 {Participation in the Summer School as an Industrial Researcher}
 {\includegraphics[width=2cm]{gransasso_tech_logo.png}}  \\
 \cvcertification{2024}{Accelerated Computing with CUDA C/C++}{Nvidia Deep Learning Institute}
 {\href{https://learn.nvidia.com/certificates?id=M6jS7p7FRhmhXXMu4Z_t6g}{\underline{\faCertificate \, Certificate}}}
-{Programming and exercises on CUDA C/C++ and acceleration of custom CUDA kernel with concurrent data streams and performance profiling}
+{Programming and exercises on \texttt{CUDA C/C++} and acceleration of custom CUDA kernel with concurrent data streams and performance profiling}
 {\includegraphics[width=2cm]{nvidia-logo.png}} \\
 
 \cvcertification{2024}{Accelerated Computing with CUDA Python}{Nvidia Deep Learning Institute}
@@ -228,7 +232,7 @@ Robotics ~•~ AI ~•~ AeroSpace
 
 \cvcertification{2024}{Accelerating Data-Science and Machine Learning Workflows}
 {Nvidia Deep Learning Institute}{\href{https://learn.nvidia.com/certificates?id=DHSO_ayiRNq-8NLGQCp45Q}{\underline{\faCertificate \, Certificate}}}
-{Exercises on Data Science and Analytics using GPU-accelerated libraries: cuDF (Pandas), cuML (Scikit-Learn) and cuPy (Numpy)}
+{Exercises on Data Science and Analytics using GPU-accelerated libraries: \texttt{cuDF} (Pandas), \texttt{cuML} (Scikit-Learn) and \texttt{cuPy} (Numpy)}
 {\includegraphics[width=2cm]{nvidia-logo.png}}
 
 \end{tabular}
@@ -257,28 +261,28 @@ Robotics ~•~ AI ~•~ AeroSpace
     \vbox{\vspace{1em}}
     \cvproj{2023}{Robot head construction: Robotics and Design multi-disciplinary course}{Workshop Laboratory $\cdot$ 3D printing $\cdot$ Multidisciplinary}{https://github.com/SimonGiampy/Robotics-and-Design-Polimi}{Multidisciplinary project of Robotics and Design: building and programming of a 3d printed and programmable robot head capable of mimicking human emotions and expressiveness, while interacting with other robots of the other student groups.} \\
     
-    \cvproj{2023}{Neural Network for Spoken Language Recognition on an Embedded system}{Tensorflow Lite Micro $\cdot$ Neural Networks $\cdot$ Embedded Systems}{https://github.com/SimonGiampy/Spoken_Language_Recognition_Tensorflow_Embedded/}{Neural network recognizing the language a person is speaking, from mel spectrogram features. Developed on an Arduino Nano (TinyML kit) with TensorFlow Lite for Microcontrollers.} \\
+    \cvproj{2023}{Neural Network for Spoken Language Recognition on an Embedded system}{Tensorflow Lite Micro $\cdot$ Neural Networks $\cdot$ Embedded Systems}{https://github.com/SimonGiampy/Spoken_Language_Recognition_Tensorflow_Embedded/}{Neural network recognizing spoken languages from people, from log-mel spectrogram features. Developed on Arduino Nano (TinyML) with TensorFlow Lite for Microcontrollers.} \\
     
-    \cvproj{2023}{Natural Language Text Processing with Transformer Models}{Neural Networks $\cdot$ BERT Transformers $\cdot$ Natural Language}{https://github.com/SimonGiampy/Natural-Language-Processing-Sentiment-Analysis/}{Text analysis, sentiment analysis and response generation with BERT Transformer models. Fine-tuning of small scale Large Language Models (LLM)} \\
+    \cvproj{2023}{Natural Language Text Processing with Transformer Models}{Neural Networks $\cdot$ BERT Transformers $\cdot$ Natural Language}{https://github.com/SimonGiampy/Natural-Language-Processing-Sentiment-Analysis/}{Text analysis, sentiment analysis and response generation with BERT Transformer models. Fine-tuning of small scale Large Language Models (LLM).} \\
     
-    \cvproj{2023}{Nonlinear Time Series Classification with Online Machine Learning Models}{Streaming Machine Learning $\cdot$ Python $\cdot$ River library}{https://github.com/SimonGiampy/Non-Linear-ARMA-Streaming-ML}{Non-linear ARMA time series generation and classification with streaming (incremental learning) machine learning models in Python using the River ML library. Data Analysis and statistical interpretation of forecast data} \\
+    \cvproj{2023}{Nonlinear Time Series Classification with Online Machine Learning Models}{Streaming Machine Learning $\cdot$ Python $\cdot$ River library}{https://github.com/SimonGiampy/Non-Linear-ARMA-Streaming-ML}{Non-linear ARMA time series generation and classification with streaming (incremental learning) machine learning models in Python using the River ML library. Data Analysis and statistical interpretation of forecast data.} \\
 
-    \cvproj{2022}{Deep Learning: Convolutional Neural Networks and Transfer Learning}{Tensorflow $\cdot$ Python $\cdot$ Image Classification}{https://github.com/SimonGiampy/Deep-Learning-project-polimi}{Image classification challenge with convolutional neural networks and transfer learning of large pre-trained models. Time-series classification challenge with convolutional spectral features.} \\
+    \cvproj{2022}{Deep Learning: Convolutional Neural Networks and Transfer Learning}{Tensorflow $\cdot$ Python $\cdot$ Image Classification}{https://github.com/SimonGiampy/Deep-Learning-project-polimi}{Image classification challenge with convolutional neural networks and transfer learning of large pre-trained models. Time-series classification challenge with convolutional spectral features and deep multi-layer perceptrons.} \\
 
-    \cvproj{2022}{Mobile Robotics projects with ROS and real-world LIDAR and encoders data}{ROS $\cdot$ C++ $\cdot$ SLAM $\cdot$ Mobile Robot $\cdot$ Autonomous navigation}{https://github.com/SimonGiampy/ROS-Robotics-Project-2}{Two projects using ROS for data analysis of mecanum wheels encoders, IMU sensors and a LIDAR for autonomous simultaneous localization and mapping (SLAM)} \\
+    \cvproj{2022}{Mobile Robotics projects with ROS and real-world LIDAR and encoders data}{ROS $\cdot$ C++ $\cdot$ SLAM $\cdot$ Mobile Robot $\cdot$ Autonomous navigation}{https://github.com/SimonGiampy/ROS-Robotics-Project-2}{Two projects using ROS for data analysis of mecanum wheels encoders, IMU sensors and a LiDAR for autonomous simultaneous localization and mapping (SLAM).} \\
     
     \cvproj{2022}{STM32 Nucleo with Sensor Systems development board}{C $\cdot$ Sensors $\cdot$ Microcontroller $\cdot$ Electronics}{https://github.com/SimonGiampy/Sensor-Systems-STM32}{Development of many small projects aimed at handling a wide variety of sensors connected to the STM32 Nucleo board, using FreeRTOS and several wire communication protocols.} \\
     
-    \cvproj{2022}{STM32 Nucleo with Miosix Embedded OS kernel-space programming}{C++ $\cdot$ Embedded OS programming $\cdot$ STM32 $\cdot$ Linux}{https://github.com/SimonGiampy/STM32-Miosix-GameOfLife}{Development of the \textit{Game of Life} cellular automaton on an STM32 running an embedded OS in kernel-space, using a serial interface with an emulated terminal on a Linux machine for visualization of the automaton evolving matrix} \\
+    \cvproj{2022}{STM32 Nucleo with Miosix Embedded OS kernel-space programming}{C++ $\cdot$ Embedded OS programming $\cdot$ STM32 $\cdot$ Linux}{https://github.com/SimonGiampy/STM32-Miosix-GameOfLife}{Development of the \textit{Game of Life} cellular automaton on an STM32 running an embedded OS in kernel-space, using a serial interface with an emulated terminal on a Linux machine for visualization of the automaton evolving matrix.} \\
 
      \cvproj{2021}{Software Engineering project: an online multi-player board game}{Java $\cdot$ Game $\cdot$ Large group project $\cdot$ Git}{https://github.com/SimonGiampy/Ing_Sw_Progetto_Polimi_2021}{Group project development in Java of a multi-player online board game.
      Large project developed with extensive software engineering principles and applications of a variety of code design patterns.} \\
 
     \cvproj{2021}{LASER dynamics simulation with cellular automata in Matlab and Java}{LASER dynamics $\cdot$ Matlab $\cdot$ Java}{https://github.com/SimonGiampy/LASER-Dynamics-Simulation}{Simulation of LASER quantum dynamics of population inversion using a cellular automaton} \\
     
-    \cvproj{2021}{Vivado project: image histogram equalization in VHDL}{Vivado Xilinx $\cdot$ VHDL $\cdot$ FPGA}{https://github.com/SimonGiampy/Progetto_Reti_Logiche_Polimi_2021}{Logic circuit programming in VHDL of an equalization algorithm for image histograms} \\
+    \cvproj{2021}{Vivado project: image histogram equalization in VHDL}{Vivado Xilinx $\cdot$ VHDL $\cdot$ FPGA}{https://github.com/SimonGiampy/Progetto_Reti_Logiche_Polimi_2021}{Logic circuit programming in VHDL of an equalization algorithm for image histograms.} \\
 
-    \cvproj{2020}{A time and memory efficient command-line text editor in C}{C $\cdot$ Algorithms and Data Structures}{https://github.com/SimonGiampy/API_Polimi_Project-2020}{Time and memory efficient text editor using optimized algorithms and data structures  } \\
+    \cvproj{2020}{A time and memory efficient command-line text editor in C}{C $\cdot$ Algorithms and Data Structures}{https://github.com/SimonGiampy/API_Polimi_Project-2020}{Time and memory efficient text editor using optimized algorithms and data structures.} \\
     
   
 \end{tabular}
